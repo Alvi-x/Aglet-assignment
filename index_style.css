@@ -1,0 +1,337 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fff;
+}
+.navbar{
+    background: #000;
+    color: #fff;
+}
+.navbar a{
+    z-index: 2;
+}
+.nav-item{
+    color: #fff;
+}
+.nav-item:active{
+    text-decoration: underline;
+}
+.container-bg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    bottom: 25px;
+}
+.container-bg h1{
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+.color-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.2;
+    z-index: 1;
+}
+.h1-wrapper h1{
+    font-weight: 500;
+}
+.scroll-down{
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+.scroll-down:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+.scroll-down:after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 4px;
+    width: 2px;
+    height: 50px;
+    background: #fff;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    45%{
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+    55%{
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+    100%{
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }
+}
+.sec-1{
+    top: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: white;
+    min-height: 550px;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    overflow: hidden;
+    z-index: 1;
+}
+.sec-1 .heading-1{   
+    color: #000;
+    font-weight: 650;
+}
+.sec-1 .left{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.sec-1 .right{
+    top: 0;
+    left: 50%;
+    float: left;
+}
+.sec-1 .video-container{
+    top: 0;
+    left: 50%;
+    float: left;
+    width: 50%;
+    min-height: 100%;
+    z-index: 0;
+
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkits-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.sec-1 p{
+
+}
+/**/
+/*when on medium to large display title should float left*/
+.paragraph-1{
+    position: relative;
+    background-color: black;
+    min-height: 550px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.paragraph-1 .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    z-index: 3;
+
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkits-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.paragraph-1 .container{
+    position: relative;
+    z-index: 2;
+}
+/**/
+.paragraph-2 .container{
+    position: relative;
+    z-index: 2;
+}
+.wrapper{
+    overflow-x: auto;/*scroller*/
+}
+.wrapper .item{
+    margin-right: 2px;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;/*hide scroller*/
+}
+.horizontal-scroll{
+    position: relative;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    cursor: pointer;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #000;
+    border-top: 2px solid #000;
+    transform: rotate(45deg);
+    z-index: 9;
+}
+.scroll-up{
+    position: relative;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    cursor: pointer;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #000;
+    border-top: 2px solid #000;
+    transform: rotate(-45deg);
+}
+
+.hero{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+.hero .half-1{
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+}
+.hero .half-2{
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+    background-color: #2b2a2a;
+}
+.hero .vr{
+    position: absolute;
+    font-size: 250px;
+    font-weight: 500;
+    top: 0;
+    margin-top: 2px;
+    color: #000;
+    opacity: 0.5;
+    z-index: 2;
+}
+.hero .paragraph{
+    top: 50%;
+    padding-right: 10px;
+}
+@media screen and (max-width: 740px){
+    .no-mobile{
+        display:none;
+    }
+}
+@media screen and (min-width: 741px){
+    .mobile{
+        display:none;
+    }
+}
+@media screen and (max-width: 740px){
+
+}
+@media screen and (max-width: 1024px){
+    .desktop{
+        display:none !important
+    }
+    .p{
+        display: none;
+    }
+}
+.link{
+    -webkit-tap-highlight-color:transparent;
+    font-size:15px;
+    letter-spacing:0.025em;
+    position:relative;
+    overflow:hidden;
+    -webkit-text-stroke:0.20px;
+    z-index:1;
+    line-height:1.8;
+    display:block;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:pointer;
+}
+
+.case .section--text-image .title,.case .section--image-text .title{width:82.63904%;font-size:30px;line-height:1.2;letter-spacing:-0.02em;font-weight:bold;margin-bottom:50px}
+
+
+/*Contact Page*/
+.hero{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+.hero .half-1{
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-image: center;
+}
+.hero .half-1 img{
+    object-fit: contain;
+}
+.hero .half-2{
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+    background-color: #000;
+}
+.hero .vr{
+    position: absolute;
+    font-size: 250px;
+    font-weight: 500;
+    top: 0;
+    margin-top: 2px;
+    color: #2b2a2a;
+    opacity: 0.5;
+    z-index: 2;
+}
+.hero .paragraph{
+    top: 50%;
+    padding-right: 10px;
+}
+.paragraph a{
+    text-decoration: none;
+    color: #fff;
+}/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query, because its set by default in Bootstrap
+*/
